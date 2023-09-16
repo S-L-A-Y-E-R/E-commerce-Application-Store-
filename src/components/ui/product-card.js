@@ -7,11 +7,13 @@ import { useRouter } from "next/navigation";
 import IconButton from "./icon-button";
 import Currency from "./currency";
 import usePreview from "@/hooks/preview-modal";
+import useCart from "@/hooks/use-cart";
 
 
 const ProductCard = ({ data }) => {
     const router = useRouter();
     const previewModal = usePreview();
+    const cart = useCart();
 
     const handleClick = () => {
         router.push(`/product/${data.id}`);
@@ -21,6 +23,11 @@ const ProductCard = ({ data }) => {
         e.stopPropagation();
         previewModal.onOpen(data);
     }
+
+    const onAddToCart = (e) => {
+        e.stopPropagation();
+        cart.addItem(data);
+    };
 
     return (
         <div onClick={handleClick} className="bg-white group cursor-pointer rounded-xl border p-3 space-y-4">
@@ -38,7 +45,7 @@ const ProductCard = ({ data }) => {
                             icon={<Expand size={20} className="text-gray-600" />}
                         />
                         <IconButton
-                            onClick={() => { }}
+                            onClick={onAddToCart}
                             icon={<ShoppingCart size={20} className="text-gray-600" />}
                         />
                     </div>
