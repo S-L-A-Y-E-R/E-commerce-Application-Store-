@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Container from "./ui/Container";
-import MainNav from "./ui/MainNav";
+import MainNav from "./MainNav";
 import getCategories from "@/app/actions/get-categories";
 import NavbarActions from "./navbar-actions";
 
