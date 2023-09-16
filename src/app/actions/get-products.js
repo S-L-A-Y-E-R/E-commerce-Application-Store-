@@ -4,8 +4,8 @@ import qs from 'query-string'
 const url = `${process.env.NEXT_PUBLIC_API_URL}/products`
 
 const getProducts = async (query) => {
-    const URL = qs.stringify({
-        URL: url,
+    const URL = qs.stringifyUrl({
+        url: url,
         query: {
             colorId: query.colorId,
             sizeId: query.sizeId,
@@ -15,7 +15,7 @@ const getProducts = async (query) => {
     });
 
     try {
-        const data = await axios.get(url);
+        const data = await axios.get(URL);
         return data.data;
     } catch (e) {
         console.log(e);

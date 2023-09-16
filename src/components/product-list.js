@@ -1,7 +1,8 @@
 import NoResults from "./ui/no-results";
 import ProductCard from "./ui/product-card";
 
-const ProductList = ({ title, items }) => {
+const ProductList = ({ title, items = [] }) => {
+    console.log(items);
     return (
         <div className="space-y-4">
             <h3 className="font-bold text-3xl">{title}</h3>
