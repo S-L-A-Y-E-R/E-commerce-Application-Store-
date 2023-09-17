@@ -15,7 +15,7 @@ export default async function Home() {
   return (
     <Container>
       <div className="space-y-10 pb-10">
-        <Billboard data={billboard?billboard[0]: billboards[0]} />
+        <Billboard data={billboard.length!==0?billboard[0]: billboards[0]} />
         <div className="flex flex-col gap-y-8 px-4 sm:px-6 lg:px-8">
           <ProductList title={'Featured Products'} items={products} />
         </div>
