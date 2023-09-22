@@ -38,14 +38,17 @@ const MainNav = ({ data }) => {
                 <Menu className="md:hidden h-6 w-6 ml-4" onClick={toggleMenu} />
                 {open &&
                     (
-                        <ul className="flex flex-col gap-3 justify-center items-center divide-y rounded-lg w-full left-0 px-4   
-                        bg-slate-800 absolute translate-y-5 z-50">
+                        <ul className="flex flex-col gap-3 justify-center items-center rounded-md w-44 px-4   
+                        bg-[#eee] absolute transition-all translate-y-5 z-50 shadow-xl py-1 md:hidden">
                             {
                                 routes.map((route) => (
-                                    <li className="py-2 text-center w-full">
-                                        <Link key={route.href} href={`${route.href}`} 
+                                    <li className="text-center w-full">
+                                        <Link 
+                                        key={route.href} 
+                                        href={`${route.href}`} 
                                         onClick={toggleMenu}
-                                        className={'text-sm font-medium transition-colors text-white'}>
+                                        className={'text-sm font-medium transition-colors text-muted-foreground'}
+                                        >
                                             {route.label}
                                         </Link>
                                     </li>
