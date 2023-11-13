@@ -35,6 +35,14 @@ Clone the repo and run this command in the terminal to install the dependecies:
 npm install
 ```
 
+Add these variables to you environment:
+
+```
+NEXT_PUBLIC_API_URL=
+STORE_ID=
+
+```
+
 To run the project:
 
 ```
