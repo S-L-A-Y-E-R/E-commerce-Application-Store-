@@ -9,7 +9,7 @@ to the cart and then checkout them through the stripe payments.
 
 ### Technologies
 
-[![My Skills](https://skillicons.dev/icons?i=html,css,tailwind,js,ts,react,next,vercel,prisma)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=tailwind,react,next,vercel)](https://skillicons.dev)
 
 ## Features:
 
